@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced Telegram bot with quantum agents, voice AI, and optional crypto trading starting at $500. Custom corporate solutions available.">
+    <meta name="keywords" content="AI, Telegram bot, quantum agents, voice AI, crypto trading, machine learning, DQN">
+    <meta name="author" content="AI Innovation Lab">
+    <meta property="og:title" content="Multi-Agent AGI System | Quantum-Powered Telegram Bot">
+    <meta property="og:description" content="Free Telegram bot with voice AI and quantum agents. Unlock crypto trading with our Trading Bot plan or explore custom corporate solutions.">
+    <meta property="og:image" content="https://your-site.com/og-image.jpg">
+    <meta property="og:url" content="https://your-site.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Multi-Agent AI System | Quantum-Powered Telegram Bot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: rgba(255, 255, 255, 0.7);
+            --muted-color: rgba(255, 255, 255, 0.5);
+            --card-bg: rgba(0, 0, 0, 0.5);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --glow-color: rgba(255, 255, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: var(--primary-color);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .bg-effects {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: linear-gradient(180deg, #0a0a23 0%, #1c2526 100%);
+        }
+
+        .stars, .stars2, .stars3, .stars4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            will-change: opacity;
+        }
+
+        .stars {
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                radial-gradient(2.5px 2.5px at 50px 80px, #e0e0ff, transparent),
+                radial-gradient(2px 2px at 90px 150px, #ffffff, transparent),
+                radial-gradient(3px 3px at 120px 50px, #d0d0ff, transparent),
+                radial-gradient(2px 2px at 160px 100px, #fff, transparent),
+                radial-gradient(2.5px 2.5px at 200px 70px, #e0e0ff, transparent),
+                radial-gradient(2px 2px at 240px 120px, #ffffff, transparent);
+            background-size: 400px 400px;
+            animation: twinkle 2.5s infinite ease-in-out;
+        }
+
+        .stars2 {
+            background-image: 
+                radial-gradient(1.5px 1.5px at 30px 20px, #b0b0ff, transparent),
+                radial-gradient(1.8px 1.8px at 70px 100px, #c0c0ff, transparent),
+                radial-gradient(1.5px 1.5px at 110px 60px, #a0a0ff, transparent),
+                radial-gradient(2px 2px at 150px 130px, #b0b0ff, transparent),
+                radial-gradient(1.5px 1.5px at 190px 40px, #c0c0ff, transparent);
+            background-size: 350px 350px;
+            animation: twinkle 3.5s infinite ease-in-out;
+        }
+
+        .stars3 {
+            background-image: 
+                radial-gradient(1px 1px at 40px 70px, #9090ff, transparent),
+                radial-gradient(1.2px 1.2px at 80px 30px, #a0a0ff, transparent),
+                radial-gradient(1px 1px at 120px 140px, #9090ff, transparent),
+                radial-gradient(1.5px 1.5px at 160px 90px, #a0a0ff, transparent);
+            background-size: 500px 500px;
+            animation: twinkle 4.5s infinite ease-in-out;
+        }
+
+        .stars4 {
+            background-image: 
+                radial-gradient(1.8px 1.8px at 25px 45px, #d0d0ff, transparent),
+                radial-gradient(2px 2px at 65px 85px, #e0e0ff, transparent),
+                radial-gradient(1.5px 1.5px at 105px 125px, #c0c0ff, transparent),
+                radial-gradient(2px 2px at 145px 65px, #d0d0ff, transparent);
+            background-size: 450px 450px;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; filter: brightness(1); }
+            50% { opacity: 0.3; filter: brightness(1.5); }
+        }
+
+        @media (max-width: 768px) {
+            .bg-effects {
+                background: linear-gradient(180deg, #0a0a23 0%, #1c2526 100%);
+            }
+            .stars {
+                background-image: 
+                    radial-gradient(1.5px 1.5px at 20px 30px, #fff, transparent),
+                    radial-gradient(2px 2px at 50px 80px, #e0e0ff, transparent),
+                    radial-gradient(1.5px 1.5px at 90px 150px, #ffffff, transparent),
+                    radial-gradient(2px 2px at 120px 50px, #d0d0ff, transparent);
+                background-size: 300px 300px;
+                animation: twinkle 3s infinite ease-in-out;
+            }
+            .stars2 {
+                background-image: 
+                    radial-gradient(1px 1px at 30px 20px, #b0b0ff, transparent),
+                    radial-gradient(1.2px 1.2px at 70px 100px, #c0c0ff, transparent),
+                    radial-gradient(1px 1px at 110px 60px, #a0a0ff, transparent);
+                background-size: 250px 250px;
+                animation: twinkle 4s infinite ease-in-out;
+            }
+            .stars3 {
+                background-image: 
+                    radial-gradient(0.8px 0.8px at 40px 70px, #9090ff, transparent),
+                    radial-gradient(1px 1px at 80px 30px, #a0a0ff, transparent);
+                background-size: 350px 350px;
+                animation: twinkle 5s infinite ease-in-out;
+            }
+            .stars4 {
+                background-image: 
+                    radial-gradient(1.2px 1.2px at 25px 45px, #d0d0ff, transparent),
+                    radial-gradient(1.5px 1.5px at 65px 85px, #e0e0ff, transparent);
+                background-size: 300px 300px;
+                animation: twinkle 3.5s infinite ease-in-out;
+            }
+            @keyframes twinkle {
+                0%, 100% { opacity: 0.9; filter: brightness(1.2); }
+                50% { opacity: 0.4; filter: brightness(1.8); }
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 5px 10px;
+            border-radius: 14px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            color: var(--secondary-color);
+            animation: slideInUp 0.7s ease 0.2s both;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.4rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            animation: slideInUp 0.7s ease 0.4s both;
+            letter-spacing: -0.01em;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideInUp 0.7s ease 0.6s both;
+            font-weight: 400;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            animation: slideInUp 0.7s ease 0.8s both;
+        }
+
+        .tech-badge {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 5px 10px;
+            border-radius: 14px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @supports not (backdrop-filter: blur(20px)) {
+            .tech-badge, .hero-badge, .feature-card, .stat-card, .pricing-card, .arch-node {
+                background: rgba(20, 20, 30, 0.9);
+            }
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-2px);
+            border-color: var(--glow-color);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            animation: slideInUp 0.7s ease 1s both;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--card-bg);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--card-border);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            border-color: var(--glow-color);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .features {
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 0.6rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .section-title {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 16px 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--glow-color);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .architecture {
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .arch-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin: 28px 0;
+        }
+
+        .arch-node {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .arch-node:hover {
+            transform: translateY(-4px);
+            border-color: var(--glow-color);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .arch-node h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .arch-node p {
+            color: var(--secondary-color);
+            font-size: 0.65rem;
+        }
+
+        .stats {
+            padding: 50px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--glow-color);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .pricing {
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 20px 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--glow-color);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+        }
+
+        .pricing-card.featured::after {
+            content: 'Most Popular';
+            position: absolute;
+            top: 10px;
+            right: -20px;
+            background: var(--card-bg);
+            color: var(--primary-color);
+            padding: 4px 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+            border: 1px solid var(--card-border);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--glow-color);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-4px);
+        }
+
+        .pricing-header h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .pricing-header p {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 0.75rem;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-size: 9px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .pricing-cta {
+            width: 100%;
+            background: var(--card-bg);
+            color: var(--primary-color);
+            padding: 8px 14px;
+            border: 1px solid var(--card-border);
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.75rem;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            border-color: var(--glow-color);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .final-cta {
+            padding: 50px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all 0.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .arch-diagram {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-4px);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tech-badges {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 8px;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.2rem, 4vw, 2.2rem);
+            }
+            
+            .section-title {
+                font-size: clamp(1rem, 2.5vw, 1.6rem);
+            }
+            
+            .feature-card, .stat-card, .pricing-card, .arch-node {
+                padding: 14px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-effects">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="stars4"></div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" role="banner">
+                    Revolutionary AI Technology
+                </div>
+                <h1>Multi-Agent AI System</h1>
+                <p class="subtitle">
+                    Free Telegram bot with quantum agents and voice AI. Unlock crypto trading with our Trading Bot plan.
+                </p>
+                <div class="tech-badges">
+                    <div class="tech-badge" role="button" tabindex="0" aria-label="Multi-Agent Architecture">Multi-Agent Architecture</div>
+                    <div class="tech-badge" role="button" tabindex="0" aria-label="Quantum Agents">Quantum Agents</div>
+                    <div class="tech-badge" role="button" tabindex="0" aria-label="Voice AI">Voice AI</div>
+                    <div class="tech-badge" role="button" tabindex="0" aria-label="Crypto Trading">Crypto Trading</div>
+                    <div class="tech-badge" role="button" tabindex="0" aria-label="NLP and ML">NLP & ML</div>
+                </div>
+                <div class="cta-buttons">
+                    <!-- Replace 'your-demo-link.com' with your actual demo link -->
+                    <a href="https://www.instagram.com/reel/DMmdeJBvEKL/?igsh=MWhzbWtlenV2MzFleQ==" class="cta-button" role="button" aria-label="Watch Demo">
+                        Watch Demo
+                    </a>
+                    <a href="#final-cta" class="cta-button secondary" role="button" aria-label="Get Started">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Core Features</div>
+                <h2 class="section-title">Cutting-Edge Capabilities</h2>
+                <p class="section-subtitle">
+                    Explore the features of our free Telegram bot and premium trading capabilities
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <h3>Multi-Agent System</h3>
+                    <p>Intelligent agents with emotional analysis and quantum logic. Available in free and premium plans.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <h3>Crypto Trading</h3>
+                    <p>Automated trading with machine learning (DQN) and risk management. Available in Trading Bot plan ($500+).</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <h3>Natural Voice AI</h3>
+                    <p>Human-like voice synthesis with emotional intonation for seamless interaction. Free in Telegram.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <h3>Quantum Agents</h3>
+                    <p>Simulated quantum algorithms for enhanced decision-making. Free in Telegram, advanced in premium.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <h3>Text Analysis</h3>
+                    <p>Advanced NLP for sentiment analysis and text processing. Available in free and premium plans.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <h3>Advanced Security</h3>
+                    <p>Encryption and secure data handling for user protection. Included in all plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">System Architecture</div>
+                <h2 class="section-title">Robust Infrastructure</h2>
+                <p class="section-subtitle">
+                    Scalable architecture for high performance and reliability
+                </p>
+            </div>
+            <div class="arch-diagram">
+                <div class="arch-node fade-in">
+                    <h4>Telegram Interface</h4>
+                    <p>User Interface Layer</p>
+                </div>
+                <div class="arch-node fade-in">
+                    <h4>Agent Coordinator</h4>
+                    <p>System Management</p>
+                </div>
+                <div class="arch-node fade-in">
+                    <h4>Machine Learning Module</h4>
+                    <p>ML Engine (Free)</p>
+                </div>
+                <div class="arch-node fade-in">
+                    <h4>Trading Integration</h4>
+                    <p>Trading Operations (Premium)</p>
+                </div>
+                <div class="arch-node fade-in">
+                    <h4>Database Layer</h4>
+                    <p>SQLite Storage</p>
+                </div>
+                <div class="arch-node fade-in">
+                    <h4>Voice Synthesis</h4>
+                    <p>AI Speech Synthesis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Performance Metrics</div>
+                <h2 class="section-title">Technical Excellence</h2>
+                <p class="section-subtitle">
+                    Metrics showcasing the power of our AI system
+                </p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">60K+</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">AI Libraries</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Agent Types</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Asynchronous</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Investment Options</div>
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">
+                    From free Telegram access to premium trading and custom corporate solutions
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Free Telegram Bot</h3>
+                        <p>Perfect for exploring AI capabilities</p>
+                    </div>
+                    <div class="price">$0</div>
+                    <ul class="features-list">
+                        <li>Quantum agents</li>
+                        <li>Voice AI</li>
+                        <li>Text analysis</li>
+                        <li>Basic support</li>
+                    </ul>
+                    <!-- Replace 'your_telegram_handle' with your actual Telegram handle -->
+                    <a href="https://t.me/memnox_bot" class="pricing-cta" role="button" aria-label="Start Free">Start Free</a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-header">
+                        <h3>Trading Bot Plan</h3>
+                        <p>Unlock automated crypto trading</p>
+                    </div>
+                    <div class="price">From $500</div>
+                    <ul class="features-list">
+                        <li>Automated trading (Bybit)</li>
+                        <li>Advanced ML (DQN)</li>
+                        <li>Quantum agents</li>
+                        <li>Voice AI</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#final-cta" class="pricing-cta" role="button" aria-label="Get Trading Bot">Get Started</a>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Corporate Solutions</h3>
+                        <p>Custom implementations for enterprises</p>
+                    </div>
+                    <div class="price">$15K+</div>
+                    <ul class="features-list">
+                        <li>Full customization</li>
+                        <li>Multi-exchange integration</li>
+                        <li>Team training</li>
+                        <li>Extended support</li>
+                        <li>Priority updates</li>
+                    </ul>
+                    <a href="#final-cta" class="pricing-cta" role="button" aria-label="Contact Sales for Corporate Solutions">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Take Action</div>
+                <h2 class="section-title">Ready to Transform Your Business?</h2>
+                <p class="section-subtitle">
+                    Start with our free Telegram bot or contact us for premium plans and custom solutions
+                </p>
+            </div>
+            <div class="cta-buttons">
+                <!-- Replace 'your_telegram_handle' with your actual Telegram handle -->
+                <a href="https://t.me/pulseakiralan" class="cta-button" role="button" aria-label="Contact via Telegram">
+                    Contact via Telegram
+                </a>
+                <!-- Replace 'your_email@example.com' with your actual email -->
+                <a href="mailto:thedubsty@gmail.com" class="cta-button secondary" role="button" aria-label="Send Email">
+                    Send Email
+                </a>
+                <!-- Replace 'your-demo-link.com' with your actual demo link -->
+                <a href="https://t.me/memnox_bot" class="cta-button" role="button" aria-label="Watch Demo Video">
+                    Try for Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // IntersectionObserver for fade-in animations
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        } else {
+            // Fallback for older browsers
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.classList.add('visible');
+            });
+        }
+
+        // Keyboard accessibility for tech badges
+        document.querySelectorAll('.tech-badge').forEach(badge => {
+            badge.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    badge.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
